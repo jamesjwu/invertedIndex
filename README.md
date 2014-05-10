@@ -3,7 +3,7 @@ invertedIndex
 
 Inverted Index data structure written in python. Use it in your next search engine.
 
-SPECIFICATIONS
+Specifications
 ==============
 InvertedIndex() generates a new structure. Calling the constructor with a filename will load that file.
 addToken() will add a specific token into the data structure, with a specific line number. 
