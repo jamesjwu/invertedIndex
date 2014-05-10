@@ -27,10 +27,6 @@ def testLoad():
 	'hello': set([0])}
 	assert solution == testingIndices.contents
 
-def testLookup():
-	assert set([2]) == testingIndices.lookup("word favorite")
-	assert set([0,1]) == testingIndices.lookup("name")
-	assert None == testingIndices.lookup("barth")
 
 def testWrite():
 	testingIndices.write("outputFile.txt")
@@ -38,6 +34,10 @@ def testWrite():
 def testLoadMultipleFiles():
 	testingIndices.loadMultipleFiles(["testFile.txt", "test2.txt"])
 	assert len(testingIndices.contents) == 589
+
+def testLookup():
+	t = InvertedIndex()
+	t.load("test2.txt")
 
 
 testAddToken()
